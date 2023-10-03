@@ -1,11 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <title>JFC Stock Control Center</title>
 </head>
 <body>
-  
+    <div class="container mt-4">
+        <h1>JFC Stock Control Center (JFC SCC)</h1>
+        <p>Javier Ferre Carmona - Preentrega 3 Js</p>
+        <br><br>
+        <h2>Ingreso de stock</h2>
+        
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="nombreProducto" class="form-label">Nombre del Producto:</label>
+                    <input type="text" id="nombreProducto" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="categoriaProducto" class="form-label">Categoría del Producto:</label>
+                    <input type="text" id="categoriaProducto" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="mb-3">
+                    <label for="cantidadProducto" class="form-label">Cantidad:</label>
+                    <input type="number" id="cantidadProducto" class="form-control">
+                </div>
+            </div>
+            <div class="col-md-2">
+                <button id="agregarProducto" class="btn btn-primary btn-block">Agregar</button>
+            </div>
+        </div>
+        
+        <div class="row mt-4">
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="filtroCategoria" class="form-label">Filtrar por Categoría:</label>
+                    <select id="filtroCategoria" class="form-select">
+                        <option value="todos">Todos</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="mb-3">
+                    <label for="ordenarPor" class="form-label">Ordenar por:</label>
+                    <select id="ordenarPor" class="form-select">
+                        <option value="nombre">Nombre</option>
+                        <option value="cantidad">Cantidad</option>
+                        <option value="categoria">Categoría</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+        
+        <h2 class="mt-4">Lista de Productos</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Categoría</th>
+                    <th scope="col">Cantidad</th>
+                    <th scope="col">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="listaProductos"></tbody>
+        </table>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
